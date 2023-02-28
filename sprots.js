@@ -1,5 +1,9 @@
 const searchAllData = () =>{
     const inputElement = document.getElementById('search-value');
+    document.getElementById("single-player-details").innerHTML = "";
+    document.getElementById("male").classList.add("d-none");
+    document.getElementById("female").classList.add("d-none");
+
     const inputValue = inputElement.value;
     // console.log(inputValue)
 
@@ -48,13 +52,18 @@ const singlePlayer = (id) =>{
 }
 
 const showSinglePLayer = (data) =>{
-    const {strThumb, strPlayer, strBirthLocation, strWeight, strDescriptionEN, strInstagram
-    } = data;
+    const {strThumb, strPlayer, strBirthLocation, strWeight, strDescriptionEN, strInstagram, strGender} = data;
     const container = document.getElementById('single-player-details');
-    container.innerHTML = "";
     const div = document.createElement('div');
+    if(strGender === "Male"){
+        const element = document.getElementById("male");
+        element.classList.remove("d-none");
+    } else{
+        const element2 = document.getElementById("female");
+        element2.classList.remove("d-none");
+    }
     div.innerHTML=`
-    <div class="card mb-3 w-100 h-100">
+    <div class="card mb-3 w-100 h-100 mt-3">
         <div class="row g-0">
             <div class="col-md-4">
                 <img src="${strThumb}" class="img-fluid rounded-start" alt="...">

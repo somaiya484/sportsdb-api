@@ -20,6 +20,12 @@
                         <input id="search-value" class="form-control me-2 w-50" type="search" placeholder="Search" aria-label="Search">
                         <button onclick="searchAllData()" class="btn btn-outline-success" type="submit">Search</button>
                       </div>
+                      <div class="d-flex justify-content-center">
+                        <div class="spinner-border" role="status">
+                          <span class="visually-hidden">Loading...</span>
+                        </div>
+                      </div>
+                      
                       <div id="player-info" class="row row-cols-1 row-cols-md-2 g-4 mt-2">
 
                       </div>
@@ -27,8 +33,8 @@
                 <div class="col-lg-6 my-5">
                     <h1>right side</h1>
                     <div>
-                      <img class="w-75 h-50 my-2" src="female-football.jpg" alt="">
-                      <img class="w-75 h-50" src="football_1.webp" alt="">
+                      <img id="male" class="w-75 h-50 d-none" src="football_1.webp" alt="">
+                      <img id="female" class="w-75 h-50 my-2 d-none" src="female-football.jpg" alt="">
                     </div>
                     <div id="single-player-details">
 
